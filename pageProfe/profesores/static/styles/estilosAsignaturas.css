@@ -1,0 +1,92 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.year {
+    margin-bottom: 20px;
+}
+
+.header {
+    background-color: orange;
+    color: white;
+    padding: 10px;
+}
+
+.padding {
+    padding: 10px;
+}
+
+.asgn {
+    margin-bottom: 10px;
+}
+
+.asistencia-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.asistencia-button:hover {
+    background-color: #218838;
+}
+
+.modal-content {
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.qr-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centrar-qr {
+    max-width: 100%;
+    height: auto;
+}
+
+.danger-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.danger-button:hover {
+    background-color: #c82333;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+}

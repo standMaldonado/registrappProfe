@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/estilosDocente.css' %}">
+</head>
+<body>
+    {% load static %}
+
+    <header class="toolbar">
+      <div class="toolbar-dark">
+        <h1 style="margin-right: 40px;">Bienvenido Docente</h1>
+        <img src="{% static 'images/RegistrAPP.png' %}" alt="RegistrAPP" class="centrar-imagen"/>
+      </div>
+    </header>
+
+    <main class="contenido">
+      <div class="selecciones">
+        <div class="centrar-vertical">
+          <form action="{% url 'asignaturas' %}" method="POST" class="boton-grande">
+            {% csrf_token %}
+            <button type="submit" class="warning-button">EMPEZAR UNA ASISTENCIA
+              <i class="qr-code-outline"></i>
+            </button>
+          </form>
+          <form action="{% url 'login' %}" method="POST" class="boton-grande">
+            {% csrf_token %}
+            <button type="submit" class="danger-button">CERRAR SESIÓN</button>
+          </form>
+        </div> 
+      </div>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/estilosOlvide.css' %}">
+</head>
+<body>
+    
+
+    <header class="toolbar">
+      <div class="toolbar-dark">
+        <a href="{% url 'login' %}" class="back-button">Volver</a>
+        <h1>Recuperación</h1>
+      </div>
+    </header>
+
+    <main class="contenido">
+      <div class="imagen">
+        <img src="{% static 'images/RegistrAPP.png' %}" alt="RegistrAPP" class="centrar-imagen"/>
+      </div>
+
+      <form method="POST" class="formulario">
+        {% csrf_token %}
+        <input aria-label="Medium input" class="medium-input" placeholder="Usuario" name="nombreUsuario">
+        <div class="ingreso">
+          <button type="submit" class="warning-button">Recuperar
+            <i class="arrow-forward-outline"></i>
+          </button>
+        </div>
+      </form>
+    </main>
+
+    {% if message %}
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                alert('{{ message }}');
+                window.location.href = "{% url 'login' %}";
+            }, 0);
+        }
+    </script>
+    {% endif %}
+</body>
+</html>

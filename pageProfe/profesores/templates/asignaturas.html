@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mis asignaturas</title>
+    <script src="{% static 'js/modalQr.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/estilosAsignaturas.css' %}">
+</head>
+<body>
+    <div class="year">
+        <div class="header" color="dark">
+            <label>PRIMER AÑO</label>
+        </div>
+        <div id="selec" class="padding">
+            <div class="asgn">MAT1121-001D
+                <button onclick="setOpen(true);generar('MAT1121-001D')" class="asistencia-button">Pasar asistencia</button>
+            </div>
+            <div id="selec2" class="ion-padding" slot="content">
+                <div class="asgn">MAT1121-002D 
+                  <button onclick="setOpen(true);generar('MAT1121-002D')" color="success" class="asistencia-button">Pasar asistencia</button>
+                </div>
+              </div>
+              <div id="selec" class="ion-padding" slot="content">
+                <div class="asgn">MAT1121-003D 
+                  <button onclick="setOpen(true);generar('MAT1121-003D')" color="success" class="asistencia-button">Pasar asistencia</button>
+                </div>
+              </div>
+              <div id="selec2" class="ion-padding" slot="content">
+                <div class="asgn">YSE1231-001D 
+                  <button onclick="setOpen(true);generar('YSE1231-001D')" color="success" class="asistencia-button">Pasar asistencia</onclickbutton>
+                </div>
+              </div>
+              <div id="selec" class="ion-padding" slot="content">
+                <div class="asgn">YSE1231-002D 
+                  <button onclick="setOpen(true);generar('YSE1231-002D')" color="success" class="asistencia-button">Pasar asistencia</button>
+                </div>
+              </div>
+              <div id="selec2" class="ion-padding" slot="content">
+                <div class="asgn">YSE1231-003D 
+                  <button onclick="setOpen(true);generar('YSE1231-003D')" color="success" class="asistencia-button">Pasar asistencia</button>
+                </div>
+              </div>
+            
+        </div>
+    </div>
+    <div class="year">
+        <div class="header" color="dark">
+            <label>SEGUNDO AÑO</label>
+        </div>
+        <div id="selec" class="padding">
+            <div class="asgn">MAT2121-001D
+                <button onclick="setOpen(true);generar('MAT2121-001D')" class="asistencia-button">Pasar asistencia</button>
+            </div>
+            <div id="selec" class="ion-padding" slot="content">
+                <div class="asgn">MAT2121-001D 
+                  <button onclick="setOpen(true);generar('MAT2121-001D')" color="success" class="asistencia-button">Pasar asistencia</button>
+                </div>
+              </div>
+              <div id="selec2" class="ion-padding" slot="content">
+                <div class="asgn">MAT2121-002D 
+                  <button onclick="setOpen(true);generar('MAT2121-002D')" color="success" class="asistencia-button">Pasar asistencia</button>
+                </div>
+              </div>
+              <div id="selec" class="ion-padding" slot="content">
+                <div class="asgn">MAT2121-003D 
+                  <button onclick="setOpen(true);generar('MAT2121-003D')" color="success" class="asistencia-button">Pasar asistencia</button>
+                </div>
+              </div>
+              <div id="selec2" class="ion-padding" slot="content">
+                <div class="asgn">DYR2311-001D 
+                  <button onclick="setOpen(true);generar('DYR2311-001D')" color="success" class="asistencia-button">Pasar asistencia</button>
+                </div>
+              </div>
+              <div id="selec" class="ion-padding" slot="content">
+                <div class="asgn">DYR2311-002D 
+                  <button onclick="setOpen(true);generar('DYR2311-002D')" color="success" class="asistencia-button">Pasar asistencia</button>
+                </div>
+              </div>
+            
+        </div>
+    </div>
+    <div class="year">
+        <div class="header" color="dark">
+            <label>TERCER AÑO</label>
+        </div>
+        <div id="selec" class="padding">
+            <div class="asgn">PRY3322-001D
+                <button onclick="setOpen(true);generar('PRY3322-001D')" class="asistencia-button">Pasar asistencia</button>
+            </div>
+            <div id="selec" class="ion-padding" slot="content">
+                <div class="asgn">PRY3322-001D 
+                  <button onclick="setOpen(true);generar('PRY3322-001D')" color="success" class="asistencia-button">Pasar asistencia</button>
+                </div>
+              </div>
+              <div id="selec2" class="ion-padding" slot="content">
+                <div class="asgn">PRY3322-002D
+                  <button onclick="setOpen(true);generar('PRY3322-002D')" color="success" class="asistencia-button">Pasar asistencia</button>
+                </div>
+              </div>
+              <div id="selec" class="ion-padding" slot="content">
+                <div class="asgn">TFT3333-001D 
+                  <button onclick="setOpen(true);generar('TFT3333-001D')" color="success" class="asistencia-button">Pasar asistencia</button>
+                </div>
+              </div>
+        </div>
+    </div> 
+    <div id="modal">
+      <div class="modal-content">
+          <header>
+              <h2>Escanear codigo QR <div class="modal-header-text"></div></h2>
+          </header>
+          <div style="display: flex; align-items: center; justify-content: center;">
+              <img src="{% static 'images/qrCuentiao.png' %}" class="centrar-qr">
+          </div>
+          <footer>
+              <p>Estudiantes ingresados: 0</p>
+              <button onclick="setOpen(false)" class="danger-button">SALIR</button>
+          </footer>
+      </div>
+  </div>
+</body>
+</html>
